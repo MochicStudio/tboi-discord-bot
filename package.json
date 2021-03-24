@@ -1,32 +1,24 @@
 {
-  "name": "discordtboa-bot",
-  "version": "0.0.1",
-  "description": "The discord bot (and TCP server) used to interact with the DiscordTBOA mod",
-  "main": "dist/index.js",
-  "devDependencies": {
-    "@types/node": "^14.14.35",
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
-    "eslint": "^7.22.0",
-    "eslint-plugin-react": "^7.22.0",
-    "typescript": "^4.2.3"
-  },
+  "name": "tboi-discord-bot",
+  "version": "1.0.0",
+  "description": "The Binding of Isaac Discord Bot",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node ."
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DiscordTBOA/bot.git"
+    "url": "git+https://github.com/MochicStudio/tboi-discord-bot.git"
   },
-  "keywords": [],
-  "author": "GoogleFeud",
+  "author": "Andres Ruiz",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/DiscordTBOA/bot/issues"
+    "url": "https://github.com/MochicStudio/tboi-discord-bot/issues"
   },
-  "homepage": "https://github.com/DiscordTBOA/bot#readme",
+  "homepage": "https://github.com/MochicStudio/tboi-discord-bot#readme",
   "dependencies": {
-    "detritus-client": "^0.13.0"
+    "discord.js": "^12.5.1",
+    "eslint": "^7.22.0"
   }
 }
