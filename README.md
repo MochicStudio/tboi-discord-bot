@@ -3,6 +3,7 @@
 This fork aims to add more functionality.
 
 The discord bot (and TCP server) used to interact with the DiscordTBOA mod!
+[Get Cient Here](https://github.com/MochicStudio/tboi-discord-client)
 
 ## Features
 - Connect to a "The Binding of Isaac" game - ran either by you or a friend
@@ -12,18 +13,14 @@ The discord bot (and TCP server) used to interact with the DiscordTBOA mod!
     - Pick which items you buy from the shop
     - Pick where you go after the womb
 
-## Running
+## Getting Started
 ### Requirements
-- [Latest LTS Node.js](https://nodejs.org/en/) 
-- npm (Comes with node.js by default)
-- [A discord bot token](https://discordpy.readthedocs.io/en/latest/discord.html)
+- See `package.json`
+- [Discord Bot Token](https://discordpy.readthedocs.io/en/latest/discord.html)
 
-### Steps
-1. Clone, fork or download this repository.
-2. Create a file called `config.json`, and put this inside it:
+1. Create a file called `config.json`, and put this inside it:
 
 ```js
-
 {
     "token": "your_bot_token",
     "prefix": "b!",
@@ -31,11 +28,10 @@ The discord bot (and TCP server) used to interact with the DiscordTBOA mod!
 }
 ```
 
-Of course, replace `your_bot_token` with your actual bot token.
-
-3. Open the console in the main folder (where `package.json` is) and run the following commands:
-```
-npm i
+```sh
+npm install
 npm run start
 ```
-The first command is going to install all the required dependencies, while the second is going to transpile the code and start the bot and TCP server. Now you should see your bot online!
+
+## License
+[Apache 2.0](https://github.com/MochicStudio/tboi-discord-bot/blob/master/LICENSE)
