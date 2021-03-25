@@ -9,27 +9,30 @@ The discord bot (and TCP server) used to interact with the DiscordTBOA mod!
 - Connect to a "The Binding of Isaac" game - ran either by you or a friend
 - Execute debug commands from discord
 - Let your server members make game decisions instead of you via polls! Let them:
-    - Pick one out of four items from the item room
-    - Pick which items you buy from the shop
-    - Pick where you go after the womb
+	- Pick one out of four items from the item room
+	- Pick which items you buy from the shop
+	- Pick where you go after the womb
 
 ## Getting Started
 ### Requirements
 - See `package.json`
 - [Discord Bot Token](https://discordpy.readthedocs.io/en/latest/discord.html)
 
-1. Create a file called `config.json`, and put this inside it:
+```sh
+npm install
+```
+
+Create a file called `config.json` in your root directory. Populate as follow:
 
 ```js
 {
-    "token": "your_bot_token",
-    "prefix": "b!",
-    "port": 10032
+	"token": "your_bot_token",
+	"prefix": "b!",
+	"port": 10032
 }
 ```
 
 ```sh
-npm install
 npm run start
 ```
 
