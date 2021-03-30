@@ -1,16 +1,21 @@
-const { port } = require('../../config.json');
-const net = require('net');
+import net from 'net';
 const HOST = '127.0.0.1';
-const PORT = port;
 
-exports.start = () => {
-	net.createServer(function(sock){
-		sock.on('data', function(data){
-			sock.write(data);
-		});
+export default class Server{
+	constructor(port){
+		this.port = port;
+	}
 
-		sock.close('close', function(data){
-			console.log('Server Closed');
-		});
-	}).listen(HOST, PORT);
-};
+	start(){
+		net.createServer(function(sock){
+			sock.on('data', function(data){
+				sock.write(data);
+			});
+
+			sock.close('close', function(data){
+				console.log('Server Closed');
+			});
+		}).listen(HOST, this.port);
+		console.log("Server Ready!");
+	}
+}

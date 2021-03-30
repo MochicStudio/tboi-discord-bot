@@ -1,13 +1,19 @@
-const { prefix, token } = require('../../config.json');
-const Discord = require('discord.js');
-const client = new Discord.Client();
+import discord from 'discord.js';
+const client = new discord.Client();
 
-exports.start = () => {
-	client.once('ready', () => { console.log('Ready!'); });
-	client.on('message', message => {
-		if(message.content == `${prefix}say`)
-			message.channel.send('Hello there');
-	});
+export default class Bot{
+	constructor(prefix, token){
+		this.prefix = prefix;
+		this.token = token;
+	}
 
-	client.login(token);
-};
+	start(){
+		client.once('ready', () => { console.log('Bot Ready!'); });
+		client.on('message', message => {
+			if(message.content == `${this.prefix}say`)
+				message.channel.send('Hello there');
+		});
+
+		client.login(this.token);
+	}
+}

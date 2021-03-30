@@ -26,9 +26,9 @@ Create a file called `config.json` in your root directory. Populate as follow:
 
 ```js
 {
-	"token": "your_bot_token",
-	"prefix": "b!",
-	"port": 10032
+	"token": "Your token",
+	"prefix": "isaac!",
+	"port": 25090
 }
 ```
 
