@@ -1,21 +1,19 @@
-/* Load config */
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const { prefix, token } = require('../../config.json');
-/* Everything else */
 import discord from 'discord.js';
 const client = new discord.Client();
 
 export default class Bot{
-	constructor(){}
+	constructor(prefix, token){
+		this.prefix = prefix;
+		this.token = token;
+	}
 
 	start(){
-		client.once('ready', () => { console.log('Ready!'); });
+		client.once('ready', () => { console.log('Bot Ready!'); });
 		client.on('message', message => {
-			if(message.content == `${prefix}say`)
+			if(message.content == `${this.prefix}say`)
 				message.channel.send('Hello there');
 		});
 
-		client.login(token);
+		client.login(this.token);
 	}
 }
