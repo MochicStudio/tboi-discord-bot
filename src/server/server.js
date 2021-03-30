@@ -1,16 +1,24 @@
+/* Load config */
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 const { port } = require('../../config.json');
-const net = require('net');
+/* Everything else */
+import net from 'net';
 const HOST = '127.0.0.1';
 const PORT = port;
 
-exports.start = () => {
-	net.createServer(function(sock){
-		sock.on('data', function(data){
-			sock.write(data);
-		});
+export default class Server{
+	constructor(){}
 
-		sock.close('close', function(data){
-			console.log('Server Closed');
-		});
-	}).listen(HOST, PORT);
-};
+	start(){
+		net.createServer(function(sock){
+			sock.on('data', function(data){
+				sock.write(data);
+			});
+
+			sock.close('close', function(data){
+				console.log('Server Closed');
+			});
+		}).listen(HOST, PORT);
+	}
+}
