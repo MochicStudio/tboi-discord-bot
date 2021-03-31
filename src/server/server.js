@@ -8,8 +8,10 @@ export default class Server{
 
 	start(){
 		net.createServer(function(sock){
+			console.log('CONNECTED: ' + sock.remoteAddress +':'+ sock.remotePort);
+
 			sock.on('data', function(data){
-				sock.write(data);
+				console.log('DATA ' + sock.remoteAddress + ': ' + data);
 			});
 
 			sock.close('close', function(data){
