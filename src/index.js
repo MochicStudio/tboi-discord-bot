@@ -10,6 +10,3 @@ if(!config.port || !config.prefix || !config.token)
 
 const bot = new Bot(config.prefix, config.token);
 const server = new Server(config.port);
-
-bot.start();
-server.start();
