@@ -5,10 +5,13 @@ export default class Bot{
 	constructor(prefix, token){
 		this.prefix = prefix;
 		this.token = token;
+
+		this.init();
 	}
 
-	start(){
+	init(){
 		client.once('ready', () => { console.log('Bot Ready!'); });
+
 		client.on('message', message => {
 			if(message.content == `${this.prefix}say`)
 				message.channel.send('Hello there');
